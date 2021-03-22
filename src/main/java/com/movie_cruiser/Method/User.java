@@ -77,18 +77,18 @@ public class User {
 		
 	}
 	
-	@ManyToMany(fetch=FetchType.EAGER)
-	@JoinTable(name="favourites",joinColumns= @JoinColumn(name="fav_us_id",referencedColumnName="user_id")
-	,inverseJoinColumns=@JoinColumn(name="fav_mo_id",referencedColumnName="Id"))
-	private Set<Movie> favourites;
-
-
-
-	public Set<Movie> getFavourites() {
-		return favourites;
-	}
-	public void setFavourites(Set<Movie> favourites) {
-		this.favourites = favourites;
-	}
+//	@ManyToMany(fetch=FetchType.EAGER)
+//	@JoinTable(name="favourites",joinColumns= @JoinColumn(name="fav_us_id",referencedColumnName="user_id")
+//	,inverseJoinColumns=@JoinColumn(name="fav_mo_id",referencedColumnName="Id"))
+//	private Set<Movie> favourites;
+//
+//
+//
+//	public Set<Movie> getFavourites() {
+//		return favourites;
+//	}
+//	public void setFavourites(Set<Movie> favourites) {
+//		this.favourites = favourites;
+//	}
 
 }

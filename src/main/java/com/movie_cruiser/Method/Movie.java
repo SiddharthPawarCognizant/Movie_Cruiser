@@ -87,15 +87,15 @@ public class Movie {
 	}
 	
 	
-	@ManyToMany(mappedBy="favourites")
-	Set<User> userList;
-	
-	public Set<User> getUserList() {
-		return userList;
-	}
-	public void setUserList(Set<User> userList) {
-		this.userList = userList;
-	}
+//	@ManyToMany(mappedBy="favourites")
+//	Set<User> userList;
+//	
+//	public Set<User> getUserList() {
+//		return userList;
+//	}
+//	public void setUserList(Set<User> userList) {
+//		this.userList = userList;
+//	}
 	
 	
 	public Movie() {

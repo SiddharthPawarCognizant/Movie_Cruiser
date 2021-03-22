@@ -85,10 +85,15 @@ public class AngularController {
 	
 	
 	@RequestMapping(value = "/view-fav/{username}")
-	public List<Favourite> getfavlist(@PathVariable String username) {
+	public List<Movie> getfavlist(@PathVariable String username) {
 		User user=userservice.getbyuser(username);
 		List<Favourite> cart =favouriteService.getallFav(user.getId());
-		return cart;
+		List<Movie> movies=new ArrayList<Movie>(); 
+		 for(Favourite f: cart) {
+			Movie m= movieservice.GetMovieRow(f.getFavmoid());
+			 movies.add(m);
+		 }
+		return movies;
 	}
 	
 //	@RequestMapping(value = "/view-fav/{username}")
